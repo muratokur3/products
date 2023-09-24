@@ -1,0 +1,21 @@
+#sidebar-menu {
+
+    width: 20%;
+    background: linear-gradient(to bottom, green,yellow,orange, red);
+   
+    ul{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px;
+      list-style: none;
+
+    }
+    li {
+      font-size: 1.3rem;
+      border: 1px solid rgba(255, 255, 255, 0.39);
+      border-radius: 0 15px 15px 0;
+      padding: 5px;
+    }
+  }
+
