@@ -4,18 +4,8 @@ import "../styles/product-list.scss";
 const ProductLis = ({ products }) => {
   return (
     <div id="product-list">
-      {
-        products.map((product)=>
-        <div className="card">
-      <h2>{product.productName}</h2>
-      <h3>{product.quantityPerUnit}</h3>
-      <h3>{product.unitPrice}</h3>
-      <h3>{product.unitsInStock}</h3>
-      </div>
-        )
-      }
       
-      {/* <table>
+       <table>
         <thead>
           <th>id</th>
           <th>Product Name</th>
@@ -34,8 +24,8 @@ const ProductLis = ({ products }) => {
             </tr>
           ))}
         </tbody> 
-      </table>*/}
-    </div>
+      </table>
+      </div>
   );
 };
 
