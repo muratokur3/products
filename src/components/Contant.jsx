@@ -5,9 +5,9 @@ const Contant = ({setProducts,categories,products,setSelectedCategorie,selectedC
   return (
     <div id='contant'>
       
-     <Sidebar products={products} categories={categories} setProducts={setProducts} setSelectedCategorie={setSelectedCategorie}/>
+     <Sidebar products={products} categories={categories} setProducts={setProducts} setSelectedCategorie={setSelectedCategorie} selectedCategorie={selectedCategorie}/>
      {}
-     <ProductList products={selectedCategorie!==null?products.filter(product=>product.categoryId===selectedCategorie):products}/>
+     <ProductList products={selectedCategorie!==null?products.filter(product=>product.categoryId===selectedCategorie):products} />
     </div>
   )
 }

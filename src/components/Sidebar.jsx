@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../styles/sidebar.scss'
-const Sidebar = ({categories,setProducts,products,setSelectedCategorie}) => {
+const Sidebar = ({categories,setProducts,products,setSelectedCategorie,selectedCategorie}) => {
 
   const [categorie,setCategorie]=useState(null);
   const [productName,setProductName]=useState("");
@@ -33,7 +33,7 @@ const Sidebar = ({categories,setProducts,products,setSelectedCategorie}) => {
       <h1 style={{cursor:"pointer"}} onClick={()=>setSelectedCategorie(null)}>Categories</h1>
       <ul>
     {categories.map((categorie) => 
-      <li style={{cursor:"pointer"}} onClick={()=>setSelectedCategorie(categorie.id)} key={categorie.id}>{categorie.categoryName}</li>
+      <li className={selectedCategorie===categorie.id?"active":""} style={{cursor:"pointer"}} onClick={()=>setSelectedCategorie(categorie.id)} key={categorie.id}>{categorie.categoryName}</li>
     )}
       </ul>
 

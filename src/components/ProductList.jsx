@@ -24,7 +24,7 @@ const ProductLis = ({ products }) => {
               <td>{product.unitPrice}</td>
               <td>{product.unitsInStock}</td>
             </tr>
-          ))}
+          )).reverse()}
         </tbody> 
       </table>
       </div>
