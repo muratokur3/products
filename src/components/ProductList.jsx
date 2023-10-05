@@ -7,11 +7,13 @@ const ProductLis = ({ products }) => {
       
        <table>
         <thead>
-          <th>id</th>
+         <tr>
+         <th>id</th>
           <th>Product Name</th>
           <th>Qantitiy Per Unit</th>
           <th>Unit Price</th>
           <th>Units In Stock</th>
+         </tr>
         </thead>
         <tbody>
           {products.map((product) => (

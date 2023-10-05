@@ -6,28 +6,25 @@ import Contact from "./components/Contant";
 function App() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [selectedCategorie,setSelectedCategorie]=useState(null);
 
-  const getProducts = async () => {
-    const response = await fetch("http://localhost:5000/products");
+  const getData = async () => {
+    const response = await fetch("http://localhost:5000/data");
     const data = await response.json();
-    setProducts(data);
+    setProducts(data.products);
+    setCategories(data.categories);
   };
 
-  const getCategories = async () => {
-    const response = await fetch("http://localhost:5000/categories");
-    const data = await response.json();
-    setCategories(data);
-  };
+  
 
   useEffect(() => {
-    getProducts();
-    getCategories();
+    getData();
   }, []);
 
   return (
     <div>
-      <Navi categories={categories} />
-      <Contact categories={categories} products={products} setProducts={setProducts} />
+      <Navi categories={categories}  setSelectedCategorie={setSelectedCategorie}/>
+      <Contact categories={categories} products={products} setProducts={setProducts} selectedCategorie={selectedCategorie} setSelectedCategorie={setSelectedCategorie} />
     </div>
   );
 }
