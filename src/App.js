@@ -3,22 +3,26 @@ import { useEffect, useState } from "react";
 import "./styles/app.scss";
 
 import Contact from "./components/Contant";
+import axios from "axios";
 function App() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
-  
   const [selectedCategorie, setSelectedCategorie] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const getData = async () => {
-    const response = await fetch("http://localhost:5000/data");
-    const data = await response.json();
-    setProducts(data.products);
-    setCategories(data.categories);
+  const getProducts = async () => {
+    const response = await axios("http://localhost:5000/products");
+    setProducts(response.data);
+  };
+  const getCategories = async () => {
+    const response = await axios("http://localhost:5000/categories");
+    setCategories(response.data);
   };
 
   useEffect(() => {
-    getData();
-  }, []);
+    getProducts();
+    getCategories();
+  }, [products]);
 
   return (
     <div>
@@ -32,6 +36,8 @@ function App() {
         setProducts={setProducts}
         selectedCategorie={selectedCategorie}
         setSelectedCategorie={setSelectedCategorie}
+        setSelectedProduct={setSelectedProduct}
+        selectedProduct={selectedProduct}
       />
     </div>
   );
