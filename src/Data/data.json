@@ -694,40 +694,58 @@
       "isDeleted": false
     },
     {
-      "id": 78,
       "categoryId": 1,
-      "productName": "1111",
-      "quantityPerUnit": "11111",
-      "unitPrice": "111111",
-      "unitsInStock": "11111",
-      "isDeleted": false
+      "productName": "a",
+      "quantityPerUnit": "s",
+      "unitPrice": "22",
+      "unitsInStock": "22",
+      "id": 78,
+      "isDeleted": true
     },
     {
       "id": 79,
-      "categoryId": 8,
-      "productName": "ww",
-      "quantityPerUnit": "www",
-      "unitPrice": "111",
-      "unitsInStock": "222",
+      "categoryId": 1,
+      "productName": "a",
+      "quantityPerUnit": "s",
+      "unitPrice": "2",
+      "unitsInStock": "3",
+      "isDeleted": true
+    },
+    {
+      "id": 80,
+      "categoryId": 1,
+      "productName": "2",
+      "quantityPerUnit": "3",
+      "unitPrice": "4",
+      "unitsInStock": "5",
+      "isDeleted": true
+    },
+    {
+      "id": 81,
+      "categoryId": 2,
+      "productName": "1",
+      "quantityPerUnit": "1",
+      "unitPrice": "1",
+      "unitsInStock": "1",
+      "isDeleted": true
+    },
+    {
+      "id": 82,
+      "categoryId": 1,
+      "productName": "we",
+      "quantityPerUnit": "die2",
+      "unitPrice": "2",
+      "unitsInStock": "2",
       "isDeleted": false
     },
     {
-      "categoryId": 1,
-      "productName": "wwwww",
-      "quantityPerUnit": "we",
-      "unitPrice": "44",
-      "unitsInStock": "444",
-      "isDeleted": false,
-      "id": 80
-    },
-    {
-      "categoryId": 1,
-      "productName": "eeee",
-      "quantityPerUnit": "eeee",
-      "unitPrice": "55555",
-      "unitsInStock": "55555",
-      "isDeleted": false,
-      "id": 81
+      "id": 83,
+      "categoryId": 3,
+      "productName": "2",
+      "quantityPerUnit": "2",
+      "unitPrice": "2",
+      "unitsInStock": "2",
+      "isDeleted": false
     }
   ],
   "categories": [

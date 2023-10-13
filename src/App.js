@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     getProducts();
     getCategories();
-  }, [products]);
+  }, [selectedProduct]);
 
   return (
     <div>
